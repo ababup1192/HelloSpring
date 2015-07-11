@@ -3,8 +3,10 @@ package org.ababup1192;
 
 import org.springframework.data.annotation.Id;
 
+import java.io.Serializable;
 
-public class Customer {
+
+public class Customer implements Serializable {
 
     @Id
     private String id;
@@ -30,6 +32,14 @@ public class Customer {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
