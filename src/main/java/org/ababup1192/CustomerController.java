@@ -10,23 +10,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping("/Customer")
 public class CustomerController {
     @Autowired
     private CustomerRepository repository;
 
-    /*
-    @RequestMapping(method = RequestMethod.GET)
-    public
+    @RequestMapping(value = "/Customer", method = RequestMethod.GET)
     @ResponseBody
-    Customer getCustomerByFirstName(@RequestParam(value = "firstName", required = false, defaultValue = "") String name) {
+    public Customer getCustomerByFirstName(
+            @RequestParam(value = "firstName", required = false, defaultValue = "") String name) {
         return repository.findByFirstName(name);
-    }*/
+    }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public
+    @RequestMapping(value = "/Customers", method = RequestMethod.GET)
     @ResponseBody
-    List<Customer> getCustomersByLastName(@RequestParam(value = "lastName", required = false) String name) {
+    public List<Customer> getCustomersByLastName(
+            @RequestParam(value = "lastName", required = false) String name) {
         return repository.findByLastName(name);
     }
 }
