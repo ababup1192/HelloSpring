@@ -83,5 +83,10 @@
     <orderEntry type="library" exported="" name="Gradle: org.eclipse.jetty:jetty-jndi:9.2.11.v20150529" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.ow2.asm:asm-tree:5.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.glassfish:javax.el:3.0.1-b08" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework.boot:spring-boot-starter-data-mongodb:1.2.5.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.mongodb:mongo-java-driver:2.12.5" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-tx:4.1.7.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework.data:spring-data-mongodb:1.6.3.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.springframework.data:spring-data-commons:1.9.3.RELEASE" level="project" />
   </component>
 </module>
