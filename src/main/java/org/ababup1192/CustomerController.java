@@ -12,16 +12,6 @@ public class CustomerController {
     private CustomerRepository repository;
 
     /*
-        $ curl -i http://localhost:9000/Customers?firstName=Alice
-    */
-    @RequestMapping(value = "/Customer", method = RequestMethod.GET)
-    @ResponseBody
-    public Customer getCustomerByFirstName(
-            @RequestParam(value = "firstName", required = false, defaultValue = "") String name) {
-        return repository.findByFirstName(name);
-    }
-
-    /*
         $ curl -i http://localhost:9000/Customers
         $ curl -i http://localhost:9000/Customers?lastName=Smith
     */
@@ -34,6 +24,16 @@ public class CustomerController {
         } else {
             return repository.findByLastName(name);
         }
+    }
+
+    /*
+        $ curl -i http://localhost:9000/Customers?firstName=Alice
+    */
+    @RequestMapping(value = "/Customer", method = RequestMethod.GET)
+    @ResponseBody
+    public Customer getCustomerByFirstName(
+            @RequestParam(value = "firstName", required = false, defaultValue = "") String name) {
+        return repository.findByFirstName(name);
     }
 
     /*
